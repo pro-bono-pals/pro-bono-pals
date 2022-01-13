@@ -44,6 +44,10 @@ Task.init(
         isCompleted: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
+        },
+        alloted_time: {
+            type: DataTypes.TIME,
+            allowNull: false
         }
     },
     {
