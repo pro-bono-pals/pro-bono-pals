@@ -18,15 +18,15 @@ Task.init(
                 key:"id",
             }
         },
-        task_name:{
-            type: DataTypes.VARCHAR,
+        taskName:{
+            type: DataTypes.CHAR,
             allowNull:false,
         },
         description:{
-            type: DataTypes.VARCHAR,
+            type: DataTypes.CHAR,
             allowNull:false,
         },
-        post_date: {
+        postDate: {
             type: DataTypes.DATE,
             allowNull:false,
         },
@@ -45,7 +45,7 @@ Task.init(
             type: DataTypes.BOOLEAN,
             allowNull: false,
         },
-        alloted_time: {
+        allotedTime: {
             type: DataTypes.TIME,
             allowNull: false
         }

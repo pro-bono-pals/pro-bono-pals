@@ -11,8 +11,8 @@ Service.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        service_name: {
-            type: DataTypes.VARCHAR,
+        serviceName: {
+            type: DataTypes.CHAR,
             allowNull: false
         }
     },
