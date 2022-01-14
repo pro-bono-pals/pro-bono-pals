@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Fiona",
+        "email": "fiona@email.com",
+        "password": "password1",
+        "isProvider": true
+    },
+    {
+        "name": "Evan",
+        "email": "evan@email.com",
+        "password": "password1",
+        "isProvider": true
+    },
+    {
+        "name": "Cami",
+        "email": "cami@email.com",
+        "password": "password1",
+        "isProvider": false
+    },
+    {
+        "name": "Amadea",
+        "email": "amadea@email.com",
+        "password": "password1",
+        "isProvider": false
+    }
+]
