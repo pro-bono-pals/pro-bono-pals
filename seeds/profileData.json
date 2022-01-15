@@ -1,0 +1,9 @@
+[
+    {
+        "disclaimer": true,
+        "serviceId":1,
+        "zipcode":12345,
+        "userId": 1,
+        "educationId":1
+    }
+]

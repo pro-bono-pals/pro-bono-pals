@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // const educationRoutes = require('./educationRoutes');
-// const profileRoutes = require('./profileRoutes');
+const profileRoutes = require('./profileRoutes');
 // const serviceRoutes = require('./serviceRoutes');
 // const taskRoutes = require('./taskRoutes');
 const userRoutes = require('./userRoutes');
@@ -10,7 +10,7 @@ const userRoutes = require('./userRoutes');
 
 
 // router.use('/education', educationRoutes);
-// router.use('/profile', profileRoutes);
+router.use('/profile', profileRoutes);
 // router.use('/service', serviceRoutes);
 // router.use('/task', taskRoutes);
 router.use('/user', userRoutes);
