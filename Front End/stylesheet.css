@@ -1,3 +1,103 @@
-.container{
-background-image:"./Assets/3.png";
+.pagecontainer{
+    background-color: #f2c173;
+}
+.background-image {
+   margin: auto;
+    display: block;
+    min-height: 100%;
+    /* min-width: 1020px; */
+     /* height: 60%; */
+    position: static;
+    /* top: 0;
+    left: 0; */
+    /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  /* width: 60%; */
+  width: 600px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+ background-color: #f2c173;
+ border-style: solid;
+    border-color: black;
+ margin-top: 0;
+    margin-bottom: 0;
+
+} 
+.introcontainer{
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    position: static;
+}
+.usercontainer{
+background-color: #f2c173;
+}
+  .usercontainer .provider {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+       
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:#A7D2DD;
+    color: white;
+    font-size: 28px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 10px;
+  }
+  .usercontainer .reciever {
+    position: absolute;
+    top: 114%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #F47068;
+    color: white;
+    font-size: 28px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 10px;
+  }
+  .aboutuscontainer{
+      position: relative;
+      display: block;
+      justify-content: center;
+      align-content: center;
+      width: auto;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+      /* border-style: solid; */
+    /* border-color: black; */
+        }
+  
+.listingscontainer{
+    background-color: #F2CB90;
+    color:black;
+    margin: 100px 300px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    img.bg {
+        left: 50%;
+        margin-left: -512px;
+    }
 }
