@@ -11,7 +11,7 @@ Education.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        educationName: {
+        name: {
             type: DataTypes.CHAR,
             allowNull: false
         }

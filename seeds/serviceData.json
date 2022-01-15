@@ -1,16 +1,16 @@
 
 [
         { 
-            "serviceName":"Coding"
+            "name":"Coding"
         },
         { 
-            "serviceName":"Law"
+            "name":"Law"
         },
         { 
-            "serviceName":"Culinary"
+            "name":"Culinary"
         },
         { 
-            "serviceName":"trade"
+            "name":"trade"
         }
     
 ]

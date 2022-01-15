@@ -18,7 +18,7 @@ Task.init(
                 key:"id",
             }
         },
-        taskName:{
+        name:{
             type: DataTypes.CHAR,
             allowNull:false,
         },
