@@ -1,6 +1,6 @@
 [
     {
-        "taskName": "Help with Bake Sale",
+        "name": "Help with Bake Sale",
         "description": "baking 100 cookies for a fundraiser",
         "postDate": "2022-01-15",
         "allotedTime": "01:59:00",
@@ -10,7 +10,7 @@
         "serviceId": 3
     },
     {
-        "taskName": "Coding Homework",
+        "name": "Coding Homework",
         "description": "help a student with javascript coding homework",
         "postDate": "2022-01-15",
         "allotedTime": "00:50:00",
