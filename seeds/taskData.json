@@ -1,0 +1,22 @@
+[
+    {
+        "taskName": "Help with Bake Sale",
+        "description": "baking 100 cookies for a fundraiser",
+        "postDate": "2022-01-15",
+        "allotedTime": "01:59:00",
+        "isActive": true,
+        "isCompleted": false,
+        "userId": 1,
+        "serviceId": 3
+    },
+    {
+        "taskName": "Coding Homework",
+        "description": "help a student with javascript coding homework",
+        "postDate": "2022-01-15",
+        "allotedTime": "00:50:00",
+        "isActive": true,
+        "isCompleted": false,
+        "userId": 2,
+        "serviceId": 1
+    }
+]
