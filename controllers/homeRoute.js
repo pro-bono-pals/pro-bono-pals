@@ -1,9 +1,11 @@
 const router = require('express').Router();
-// const { route } = require('.');
+const path = require('path');
+const {route } = require('./api');
+const isAuth = require('../utils/auth')
 // const {User, Education, Profile, Service, Task} = require('../../models');
 // isAuth, api route
 
-router.get('/', async (req,res)=>{
+router.get('/', (req,res)=>{
     try{
         res.render('homepage');
     }catch(err){
@@ -12,3 +14,4 @@ router.get('/', async (req,res)=>{
     
 })
 
+module.exports = router;

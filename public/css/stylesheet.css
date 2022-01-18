@@ -1,6 +1,9 @@
 .pagecontainer{
     background-color: #f2c173;
 }
+body {
+  background-color: #f2c173;
+}
 .background-image {
    margin: auto;
     display: block;
