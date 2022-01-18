@@ -4,7 +4,7 @@ const profileRoutes = require('./profileRoutes');
 const serviceRoutes = require('./serviceRoutes');
 const taskRoutes = require('./taskRoutes');
 const userRoutes = require('./userRoutes');
-// const homepageRoutes = require('./homepageRoutes');
+// const homeRoutes = require('./homeRoute');
 // const dashboardRoutes = require('./dashboardRoutes');
 // const dashboardProviderRoutes = require('./dashboardProviderRoutes');
 
@@ -14,6 +14,7 @@ router.use('/profile', profileRoutes);
 router.use('/service', serviceRoutes);
 router.use('/task', taskRoutes);
 router.use('/user', userRoutes);
+// router.use('/homepage',homeRoutes);
 // 
 
 module.exports = router;
