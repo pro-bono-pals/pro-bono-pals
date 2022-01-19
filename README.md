@@ -1,4 +1,4 @@
-  ##  pro-bono-pals
+  ##  ProBonoPals
  
   
   ## Description 
@@ -9,22 +9,36 @@
   * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
+  * [Wireframes](#wireframes)
+  * [ERD](#ERD)
   * [Questions](#questions)
   
   ## Installation 
-  Clone the repo. If any additional installation requirements are needed, it'd be here: npm inquirer, npm express, SQL
+  Clone the repo. If any additional installation requirements are needed, it'd be here: npm inquirer, npm express, SQL, Heroku
 
   ## License 
   This project does not have a liscence.
   
   ## Contributing 
-  Only the team members can contribute.
+ The contributing team members are Evan Bulliner, Amadea Margo, Fiona Nicdao, and Camille Pierre-Louis. Only the team members can contribute.
   
   ## Tests
   Use the application. Additional testing methods would be here: The user will need node.js and Heroku to deploy.
   
-  ## Questions
-  Questions? Please contact us directly via the pro-bono-pal directory.
+## Wireframes 
 
-## Our Original ERD
+<img width="443" alt="landing page" src="https://user-images.githubusercontent.com/90880822/150237328-d48f20f0-b8c6-4393-91c1-9b98243d787d.png">
+
+<img width="407" alt="sign up" src="https://user-images.githubusercontent.com/90880822/150237226-7f7fb0e1-e306-410a-aed5-cfeea6c55006.png">
+
+<img width="413" alt=" provider dashboard" src="https://user-images.githubusercontent.com/90880822/150237065-0ddaf607-dad3-4971-a48a-36d5f1d01e51.png">
+
+<img width="413" alt=" reciever dashboard" src="https://user-images.githubusercontent.com/90880822/150237163-95856685-05ab-4584-a8cf-6369c0660914.png">
+
+
+## ERD
   ![image](https://user-images.githubusercontent.com/90880822/149257796-ea55d860-5aa2-447b-b2da-9cf337ab4597.png)
+  
+ ## Questions
+ Questions? Please contact us directly via the pro-bono-pal directory.
+  
