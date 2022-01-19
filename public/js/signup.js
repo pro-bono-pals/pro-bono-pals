@@ -7,6 +7,10 @@ const signupFormHandler = async (event) => {
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const isProvider = document.querySelector('#is-provider-signup').value.trim();
+    const zipcode = document.querySelector('#zipcde-signup').value.trim;
+    const disclaimer = document.querySelector('#disclaimer-signup').value.trim();
+    const education = document.querySelector('#education-signup').value.trim();
+
 
     if (name && email && password) {
         const response = await fetch('api/users', {
