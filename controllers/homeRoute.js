@@ -15,12 +15,25 @@ router.get('/', (req,res)=>{
 })
 
 router.get('/login', (req, res) => {
-
+    // res.render('login');
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+    }
     res.render('login');
 });
 router.get('/signup', (req, res) => {
-
+    // res.render('signup');
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+    }
     res.render('signup');
+
+});
+
+router.get('/dashboard', (req,res) => {
+    res.render('provider');
 });
 
 module.exports = router;
