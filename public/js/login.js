@@ -1,4 +1,4 @@
-const { response } = require("express");
+// const { response } = require("express");
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -7,14 +7,14 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) {
-        const response = await fetch('/api/user/user/login', {
+        const response = await fetch('/api/user/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json'},
     });
 
             if (response.ok) {
-                document.location.replace('/profile');
+                document.location.replace('/dashboard');
             } else {
                 alert(response.statusText);
             }
