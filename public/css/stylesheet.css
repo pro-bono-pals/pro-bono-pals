@@ -53,14 +53,14 @@ background-color: #f2c173;
     -ms-transform: translate(-50%, -50%);
     background-color:#A7D2DD;
     color: white;
-    font-size: 28px;
+    font-size: 26px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 10px;
   }
-  .usercontainer .reciever {
+  .usercontainer .receiver {
     position: absolute;
     top: 114%;
     left: 50%;
