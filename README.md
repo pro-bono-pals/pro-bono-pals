@@ -10,7 +10,9 @@
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Wireframes](#wireframes)
-  * [ERD](#ERD)
+  * [ERD](#erd)
+  * [Landing Page](#landing-page)
+  * [Heroku](#heroku)
   * [Questions](#questions)
   
   ## Installation 
@@ -39,6 +41,11 @@
 ## ERD
   ![image](https://user-images.githubusercontent.com/90880822/149257796-ea55d860-5aa2-447b-b2da-9cf337ab4597.png)
   
+## Landing Page
+<img width="920" alt="image" src="https://user-images.githubusercontent.com/90880822/150259632-0ad5234c-5fad-43f0-bbf1-e41273e64c6b.png">
+
+## Heroku
+The live deployment is here: https://pro-bono-pals.herokuapp.com/
  ## Questions
  Questions? Please contact us directly via the pro-bono-pal directory.
   
