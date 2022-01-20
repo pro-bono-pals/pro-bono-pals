@@ -1,6 +1,6 @@
 <div> 
     <nav id="provider-dashboard-nav"> 
-        <button class="signout-btn btn-primary">Sign Out</button>
+        <button id='logout'class="signout-btn btn-primary">Sign Out</button>
         <h1>Welcome, {{ name }} </h1>
         <h6> Provider Mode</h6>
     </nav>
@@ -10,10 +10,10 @@
         <div class="post">
             <h4>Upcoming Service Opportunities</h4>
             <div id="post-title">
-                <p> Your latest service opportunity {{title of post}} </p>
+                <p> Your latest service opportunity {{task.name}} </p>
             </div>
             <div id="post-username">
-                <p> {{reciever username}} could use some help. </p>
+                <p> {{name}} could use some help. </p>
             </div>
             <div id="post-date">
                 <p> Posted on {{date}} </p>
@@ -22,10 +22,10 @@
                 <p> Service Location: {{location}} </p>
             </div>
             <div id="post-expertise">
-                <p> Service Category: {{expertise categories}} </p>
+                <p> Service Category: {{service.name}} </p>
             </div>
             <div id="post-description">
-            <p> {{post}} </p>
+            <p> {{task.description}} </p>
             <button id="acceptbtn" class="help-btn btn-primary">Accept Task</button>
         </div>
     </div>
@@ -34,10 +34,10 @@
         <h4>Current Task Info</h4>
                <div class="currentpost">
                 <div id="currentpost-title">
-                    <p> Service Needed: {{title of post}} </p>
+                    <p> Service Needed: {{task.name}} </p>
                 </div>
                 <div id="currentpost-username">
-                    <p> Reciever: {{reciever username}} is recieving your help. </p>
+                    <p> Reciever: {{name}} is recieving your help. </p>
                 </div>
                 <div id="currentpost-date">
                     <p> Post Date: {{date}} </p>
@@ -46,10 +46,10 @@
                     <p> Service Location: {{location}} </p>
                 </div>
                 <div id="currentpost-expertise">
-                    <p> Service Category: {{expertise categories}} </p>
+                    <p> Service Category: {{service.name}} </p>
                 </div>
                 <div id="currentpost-description">
-                <p> Service Description: {{post}} </p>
+                <p> Service Description: {{task.description}} </p>
         <button id="completedbtn" class="completed-btn btn-primary">Task Completed</button>
     </div>
 </div>

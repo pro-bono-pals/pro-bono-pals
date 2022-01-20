@@ -1,6 +1,6 @@
 <div>
     <nav id="reciever-dashboard-nav">
-        <button class="signout-btn btn-primary">Sign Out</button>
+        <button id='logout' class="signout-btn btn-primary">Sign Out</button>
         <h1>Welcome, {{ name }} </h1>
         <h6> Reciever Mode</h6>
 
@@ -12,10 +12,10 @@
             <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
             <h4> My Service Requests</h4>
             <div id="mypost-title">
-                <p> Post Title: {{title of post}} </p>
+                <p> Post Title: {{task.name}} </p>
             </div>
             <div id="mypost-username">
-                <p> My Username:{{reciever username}} </p>
+                <p> My Username:{{name}} </p>
             </div>
             <div id="mypost-date">
                 <p> Service must be completed by {{date}} </p>
@@ -24,7 +24,7 @@
                 <p> Service Location: {{location}} </p>
             </div>
             <div id="mypost-expertise">
-                <p> Service Category: {{expertise categories}} </p>
+                <p> Service Category: {{service.name}} </p>
             </div>
             <div id="mypost-description">
                 <p> {{post}} </p>
@@ -38,10 +38,10 @@
             <h4>Current Task Info</h4>
             <div class="currentpost">
                 <div id="currentpost-title">
-                    <p> Service Needed: {{title of post}} </p>
+                    <p> Service Needed: {{task.name}} </p>
                 </div>
                 <div id="currentpost-username">
-                    <p> Reciever: {{reciever username}} is recieving your help. </p>
+                    <p> Reciever: {{name}} is recieving your help. </p>
                 </div>
                 <div id="currentpost-date">
                     <p> Post Date: {{date}} </p>
@@ -50,10 +50,10 @@
                     <p> Service Location: {{location}} </p>
                 </div>
                 <div id="currentpost-expertise">
-                    <p> Service Category: {{expertise categories}} </p>
+                    <p> Service Category: {{service.name}} </p>
                 </div>
                 <div id="currentpost-description">
-                    <p> Service Description: {{post}} </p>
+                    <p> Service Description: {{task.description}} </p>
                     <!-- <button class="completed-btn btn-primary">Task Completed</button> -->
                 </div>
             </div>
