@@ -2,7 +2,7 @@ const router = require('express').Router();
 const path = require('path');
 const {route } = require('./api');
 const isAuth = require('../utils/auth')
-// const {User, Education, Profile, Service, Task} = require('../../models');
+const {User, Education, Profile, Service, Task} = require('../models'); 
 // isAuth, api route
 
 router.get('/', (req,res)=>{
@@ -32,8 +32,41 @@ router.get('/signup', (req, res) => {
 
 });
 
-router.get('/dashboard', (req,res) => {
-    res.render('provider');
+router.get('/dashboard',isAuth,async (req,res) => {
+    // res.render('receiver')
+    // res.render('provider')
+    const userData = await User.findByPk(req.session.userId, {
+        attributes: { exclude: ['password'] },
+        include: [
+            { 
+                model:Profile,
+                include:[{model:Education},{model:Service}]
+
+            }, 
+            {
+               model:Task 
+            },
+        ]
+        // {model:Education}, {model:Service},{model:Task}],
+    }); 
+
+    const user = userData.get({ plain: true });
+    const role = user.isProvider
+    
+    console.log("HELLOOOOOOOOOO",role)
+
+    if(role === true){
+        res.render('provider', {
+            ...user,
+            logged_in: true
+          });
+    }else{
+        res.render('receiver', {
+            ...user,
+            logged_in: true
+          });
+    }
+
 });
 
 module.exports = router;
