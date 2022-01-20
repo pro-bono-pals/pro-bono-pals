@@ -4,7 +4,7 @@ const logout = async () => {
 
     console.log("you have signed out")
  //note: will need to make a route to sign out
-    const response = await fetch('/api/users/logout', {
+    const response = await fetch('/api/user/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
