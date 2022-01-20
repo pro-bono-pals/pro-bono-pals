@@ -1,19 +1,59 @@
 <div> 
     <nav id="provider-dashboard-nav"> 
         <button class="signout-btn btn-primary">Sign Out</button>
-        <h2>Welcome, {{ name }} </h2>
+        <h1>Welcome, {{ name }} </h1>
+        <h6> Provider Mode</h6>
     </nav>
 </div>
 <div id="dashboard-body">
     <div id="post-list">
         <div class="post">
-            <button class="help-btn btn-primary">Accept Task</button>
+            <h4>Upcoming Service Opportunities</h4>
+            <div id="post-title">
+                <p> Your latest service opportunity {{title of post}} </p>
+            </div>
+            <div id="post-username">
+                <p> {{reciever username}} could use some help. </p>
+            </div>
+            <div id="post-date">
+                <p> Posted on {{date}} </p>
+            </div>
+            <div id="post-location">
+                <p> Service Location: {{location}} </p>
+            </div>
+            <div id="post-expertise">
+                <p> Service Category: {{expertise categories}} </p>
+            </div>
+            <div id="post-description">
+            <p> {{post}} </p>
+            <button id="acceptbtn" class="help-btn btn-primary">Accept Task</button>
         </div>
-
+    </div>
     </div>
     <div id="current-tasks">
-        <button class="completed-btn btn-primary">Task Completed</button>
+        <h4>Current Task Info</h4>
+               <div class="currentpost">
+                <div id="currentpost-title">
+                    <p> Service Needed: {{title of post}} </p>
+                </div>
+                <div id="currentpost-username">
+                    <p> Reciever: {{reciever username}} is recieving your help. </p>
+                </div>
+                <div id="currentpost-date">
+                    <p> Post Date: {{date}} </p>
+                </div>
+                <div id="currentpost-location">
+                    <p> Service Location: {{location}} </p>
+                </div>
+                <div id="currentpost-expertise">
+                    <p> Service Category: {{expertise categories}} </p>
+                </div>
+                <div id="currentpost-description">
+                <p> Service Description: {{post}} </p>
+        <button id="completedbtn" class="completed-btn btn-primary">Task Completed</button>
     </div>
 </div>
 
+
+</div>
 <script src="./js/provider.js"
