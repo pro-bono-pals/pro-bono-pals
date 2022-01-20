@@ -1,8 +1,8 @@
-const newPostHandler = async (event) => {
+const newTaskHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#post-title').value.trim();
-    const text = document.querySelector('#post-text').value.trim();
+    const title = document.querySelector('#task-title').value.trim();
+    const text = document.querySelector('#task-text').value.trim();
    
     if (title && text) {
       const response = await fetch(`/api/posts`, {
@@ -16,11 +16,11 @@ const newPostHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/dashboard');
       } else {
-        alert('Failed to create post');
+        alert('Failed to create task');
       };
     };
 };
 
 document
-  .querySelector('.new-post-form')
-  .addEventListener('submit', newPostHandler);
+  .querySelector('.new-task-form')
+  .addEventListener('submit', newTaskHandler);
