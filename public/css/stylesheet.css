@@ -92,6 +92,47 @@ background-color: #f2c173;
     color:black;
     margin: 100px 300px;
 }
+.mypost{
+  border: solid;
+  border-color: red;
+  float: left;  
+  width: auto;
+}#mydashboard-body{
+  display: flex;
+  justify-content: space-around;
+  border: solid;
+  border-color: black;
+}
+#mycurrent-tasks{
+border: solid;
+border-color: blue;
+float: right;
+width: auto;
+}
+#newpostbtn{
+  float: right;
+}
+.post{
+  border: solid;
+  border-color: red;
+  float: left;  
+  width: auto;
+}#dashboard-body{
+  display: flex;
+  justify-content: space-around;
+  border: solid;
+  border-color: black;
+}
+#current-tasks{
+border: solid;
+border-color: blue;
+float: right;
+width: auto;
+}
+#acceptedbtn{
+  position: static;
+  justify-self: center;
+}
 
 
 
