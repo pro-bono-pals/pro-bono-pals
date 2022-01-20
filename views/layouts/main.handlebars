@@ -20,9 +20,13 @@
   <!-- Navigation Bar - Listing Button  -->
   <button class="btn btn-light shadow-md p-3"><a href="/#servicesforus">Service Listings</a></button>
   <!-- Navigation Bar - Login Button -->
-  <button class="btn btn-light shadow-md p-3"><a href="/login">Log in</a></button>
+  {{!-- <button class="btn btn-light shadow-md p-3"><a href="/login">Log in</a></button> --}}
   <!-- Navigation Bar - Contact Us Button -->
-
+  {{#if logged_in}}
+  <button id="logout-btn"class="btn btn-light shadow-md p-3"><a href="/">Logout</a></button>
+  {{else}}
+  <button class="btn btn-light shadow-md p-3"><a href="/login">Log in</a></button>
+  {{/if}}
      </nav>
   <!-- Navigation Bar - Service Name and Catchphrase -->
   <div class="text-center">
