@@ -11,12 +11,13 @@
   * [Tests](#tests)
   * [Wireframes](#wireframes)
   * [ERD](#erd)
+  * [Routes](#routes)
   * [Landing Page](#landing-page)
   * [Heroku](#heroku)
   * [Questions](#questions)
   
   ## Installation 
-  Clone the repo. If any additional installation requirements are needed, it'd be here: npm inquirer, npm express, SQL, Heroku
+  Clone the repo. If any additional installation requirements are needed, it'd be here: npm inquirer, npm express, SQL, Heroku, Toastr
 
   ## License 
   This project does not have a liscence.
@@ -40,9 +41,11 @@
 
 ## ERD
   ![image](https://user-images.githubusercontent.com/90880822/149257796-ea55d860-5aa2-447b-b2da-9cf337ab4597.png)
-  
+## Routes
+<img width="364" alt="screen_shot_2022-01-19_at_9 14 26_pm" src="https://user-images.githubusercontent.com/90880822/150457206-11ff3cfc-dc07-4d92-88c8-8ca341d27bfd.png">
+
 ## Landing Page
-<img width="920" alt="image" src="https://user-images.githubusercontent.com/90880822/150259632-0ad5234c-5fad-43f0-bbf1-e41273e64c6b.png">
+<img width="920" alt="probonolanding" src="https://user-images.githubusercontent.com/90880822/150457229-058cf807-f17b-490f-98a1-d193b0987507.png">
 
 ## Heroku
 The live deployment is here: https://pro-bono-pals.herokuapp.com/
