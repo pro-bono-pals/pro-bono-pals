@@ -5,14 +5,28 @@
     <form class="form new-task-form">
       <div class="form-group">
         <label for="task-title">Task Title:</label>
-        <input class="form-input" type="text" id="task-title" name="task-title" />
+        <input class="form-input" type="text" id="task-name" name="task-name" />
       </div>
       <div class="form-group">
-        <label for="task-text">Task Text:</label>
-        <textarea class="form-input" id="task-text" name="task-text"></textarea>
+        <label for="task-service-type">Category of service</label>
+        <select class="form-input" id="service-type" name="service-type">
+            <option value="" selected disabled>Please choose a level of service</option>
+            <option value="coding">Coding</option>
+            <option value="Culinary">Culinary</option>
+            <option value="Law">Law</option>
+            <option value="Trade">Trade</option>
+        </select>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">POST!</button>
+        <label for="alloted-time">Estimated Time to Complete Task in minutes:</label>
+        <input class="form-input" id="alloted time" name="alloted time"></input>
+      </div>
+      <div class="form-group">
+        <label for="task-description">Please describe your task here: </label>
+        <textarea class="form-input" id="task-description" name="task-description"></textarea>
+      </div>
+      <div class="form-group">
+        <button id="new-post-btn" type="submit" class="btn btn-primary">POST!</button>
       </div>
     </form>
   </div>
