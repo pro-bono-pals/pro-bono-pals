@@ -32,6 +32,16 @@ router.get('/signup', (req, res) => {
 
 });
 
+router.get('/task', isAuth, async (req, res) => {
+    if (req.session.logged_in) {
+        res.render('task', {
+            logged_in: true,
+        });
+    } else {
+        res.redirect('/task');
+    };
+})
+
 router.get('/dashboard',isAuth,async (req,res) => {
     // res.render('receiver')
     // res.render('provider')

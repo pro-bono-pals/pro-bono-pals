@@ -8,7 +8,7 @@
 <div id="dashboard-body">
     <div id="mypost-list">
         <div class="mypost">
-            <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
+            <button id="make-post-btn" class="completed-btn btn-primary">Make a NEW post</button>
             <h4> My Service Requests</h4>
             <div id="mypost-title">
                 <p> Post Title: {{task.name}} </p>
@@ -27,7 +27,6 @@
             </div>
             <div id="mypost-description">
                 <p> {{post}} </p>
-                <button class="help-btn btn-primary">Accept Task</button>
             </div>
         </div>
     </div>
@@ -53,7 +52,6 @@
                 </div>
                 <div id="currentpost-description">
                     <p> Service Description: {{task.description}} </p>
-                    <!-- <button class="completed-btn btn-primary">Task Completed</button> -->
                 </div>
             </div>
         </div>
@@ -61,3 +59,8 @@
 
     </div>
 <script src="./js/logout.js"></script>
+
+{{!-- 
+make sure to take this out before you pull to main --}}
+<script src="./js/receiver.js"></script>
+

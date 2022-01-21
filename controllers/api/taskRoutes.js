@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
       const newTask = await Task.create(req.body)
               
       req.session.save(() => {
-        req.session.taskId = taskData.id
+        req.session.taskId = newTask.id
         });
   
         res.status(200).json(newTask, { message: 'task posted!'});
