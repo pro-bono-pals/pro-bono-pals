@@ -2,8 +2,14 @@
  
   
   ## Description 
-  This is an app that bridges the gap between people who wangt to gain experience in their field and people who need pro-bono services. Meet ProBonoPals! This app matches the service provider with the service reciever based off of the category of service needed, location, and general time commitment.  
-  
+The term "pro bono" is Latin meaning "for the public good." ProBonoPals is just that: made for the public good. This application acts as 
+   a matchmaking service for those looking to provide and receive services for the public good. 
+  ProBonoPals pairs entry level professionals who want to build their 
+  portfolio and volunteer with local community members who need pro bono
+   services. This opportunity both benefits the service provider and the service receiver. 
+   The service provider gets the opportunity to do good in their community as they network and improve their 
+  craft in a low risk environment. The service receiver gets a service they need at no personal cost and they have the opportunity to build relationships with 
+ talented goodhearted people
   ## Table of Contents
   * [Installation](#installation)
   * [License](#license)
@@ -14,6 +20,7 @@
   * [Routes](#routes)
   * [Landing Page](#landing-page)
   * [Heroku](#heroku)
+  * [Credits](#credits)
   * [Questions](#questions)
   
   ## Installation 
@@ -49,6 +56,8 @@
 
 ## Heroku
 The live deployment is here: https://pro-bono-pals.herokuapp.com/
+ ## Credits
+We want to give a special thanks to the  the great creators of Girl Power 5. We saw how they utilized the toastr library and decided to leverage a few things from their project to make ours look just as cool as theirs! A huge thanks to Jen Doyle and the wonderful members of 'Girl Power 5'!
  ## Questions
  Questions? Please contact us directly via the pro-bono-pal directory.
   
