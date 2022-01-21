@@ -88,9 +88,10 @@ background-color: #f2c173;
         }
   
 .listingscontainer{
-    background-color: #F2CB90;
+    background-color: #ffe6c2;
     color:black;
     margin: 100px 300px;
+    /* background-color: #F2CB90; */
 }
 .mypost{
   border: solid;
