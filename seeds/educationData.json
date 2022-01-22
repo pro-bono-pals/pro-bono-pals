@@ -19,5 +19,25 @@
     {
         "id":"5",
         "name":"PhD"
+    },
+    {
+        "id":"6",
+        "name":"high school"
+    },
+    {
+        "id":"7",
+        "name":"some-college"
+    },
+    {
+        "id":"8",
+        "name":"professional-school"
+    },
+    {
+        "id":"9",
+        "name":"associate"
+    },
+    {
+        "id":"10",
+        "name":"no education specified"
     }
 ]
