@@ -1,6 +1,6 @@
 <div>
     <nav id="reciever-dashboard-nav">
-        <h1>Welcome, {{ name }} </h1>
+        <h1>Welcome, {{ users.name }} </h1>
         <h6> Reciever Mode</h6>
 
     </nav>
@@ -16,13 +16,13 @@
                 <p> Post Title: {{task.name}} </p>
             </div>
             <div id="mypost-username">
-                <p> My Username:{{task.user.name}} </p>
+                <p> My Username:{{task.users.name}} </p>
             </div>
             <div id="mypost-date">
                 <p> Service must be completed by {{format_date task.postDate}} </p>
             </div>
             <div id="mypost-location">
-                <p> Service Location: {{users.id}} </p>
+                <p> Service Location: NEED TO FIX {{users.id}} </p>
             </div>
             <div id="mypost-expertise">
                 <p> Service Category: {{serviceNumbers task.serviceId}} </p>
@@ -37,26 +37,29 @@
         
         <div id="mycurrent-tasks">
             <h4>Current Task Info</h4>
+            {{#each acts as |act|}}
             <div class="currentpost">
+                <p  hidden id=taskcompleteId>{{act.id}}</p>
                 <div id="currentpost-title">
-                    <p> Service Needed: {{task.name}} </p>
+                    <p> Service Needed: {{act.name}} </p>
                 </div>
                 <div id="currentpost-username">
-                    <p> Reciever: {{name}} is recieving your help. </p>
+                    <p> Reciever: {{act.users.name}} is recieving your help. </p>
                 </div>
                 <div id="currentpost-date">
-                    <p> Post Date: {{date}} </p>
+                    <p> Post Date: {{format_date act.postDate}} </p>
                 </div>
                 <div id="currentpost-location">
-                    <p> Service Location: {{location}} </p>
+                    <p> Service Location: NEED TO FIX {{location}} </p>
                 </div>
                 <div id="currentpost-expertise">
-                    <p> Service Category: {{service.name}} </p>
+                    <p> Service Category: {{serviceNumbers act.serviceId}} </p>
                 </div>
                 <div id="currentpost-description">
-                    <p> Service Description: {{task.description}} </p>
+                    <p> Service Description: {{act.description}} </p>
                 </div>
             </div>
+            {{/each}}
         </div>
 
 
