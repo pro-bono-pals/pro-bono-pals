@@ -4,19 +4,19 @@
 
     <form class="form signup-form">
       <div class="form-group">
-        <label for="name-signup">name:</label>
+        <label for="name-signup">Name:</label>
         <input class="form-input" type="text" id="name-signup" />
       </div>
       <div class="form-group">
-        <label for="email-signup">email:</label>
+        <label for="email-signup">Email:</label>
         <input class="form-input" type="text" id="email-signup" />
       </div>
       <div class="form-group">
-        <label for="password-signup">password:</label>
+        <label for="password-signup">Password:</label>
         <input class="form-input" type="password" id="password-signup" />
       </div>
       <div class="form-group">
-        <label for="is-provider-signup">password:</label>
+        <label for="is-provider-signup">Please check the box if you are planning to provide a service. If you are looking to request a service, please leav the box unchecked.</label>
         <input class="form-input" type="checkbox" id="is-provider-signup" />
       </div>
       <div class="form-group">
@@ -28,8 +28,17 @@
         <input class="form-input" type="checkbox" id="disclaimer-signup"/>
       </div>
       <div class="form-group">
-        <label for="education-signup">Please select your level of education:</label>
-        <input class="form-input" type="checkbox" id="education-signup"/>
+        <label for="education-signup">What is your highest level of education?</label>
+        <select class="form-input" id="education-signup">
+           <option value="" hidden disabled>Please select level of education</option> 
+           <option value="high-school">High school or equivalent</option>
+           <option value="some-college">Some college</option>
+           <option value="professional-school">Professional School</option>
+           <option value="associate">Associate's degree</option>
+           <option value="bachelors">Bachelor's degree</option>
+           <option value="masters">Master's degree</option>
+           <option value="doctorate">Doctorate</option>
+        </select>
       </div>
       <div class="form-group">
         <button class="btn btn-primary" type="submit">signup</button>
