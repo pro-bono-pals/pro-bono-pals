@@ -1,23 +1,27 @@
 [
     {
+        "id":"1",
         "name": "Fiona",
         "email": "fiona@email.com",
         "password": "password1",
         "isProvider": true
     },
     {
+        "id":"2",
         "name": "Evan",
         "email": "evan@email.com",
         "password": "password1",
         "isProvider": true
     },
     {
+        "id":"3",
         "name": "Cami",
         "email": "cami@email.com",
         "password": "password1",
         "isProvider": false
     },
     {
+        "id":"4",
         "name": "Amadea",
         "email": "amadea@email.com",
         "password": "password1",

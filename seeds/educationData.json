@@ -1,5 +1,23 @@
 [
     {
+    
+        "id":"1",
         "name":"Bootcamp"
+    },
+    {
+        "id":"2",
+        "name":"Bachelor Degree"
+    },
+    {
+        "id":"3",
+        "name":"Masters Degree"
+    },
+    {
+        "id":"4",
+        "name":"Law Degree"
+    },
+    {
+        "id":"5",
+        "name":"PhD"
     }
 ]

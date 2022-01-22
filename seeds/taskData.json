@@ -1,22 +1,46 @@
 [
     {
+        "id":"1",
         "name": "Help with Bake Sale",
         "description": "baking 100 cookies for a fundraiser",
         "postDate": "2022-01-15",
         "allotedTime": "01:59:00",
-        "isActive": true,
+        "isActive": false,
         "isCompleted": false,
-        "userId": 1,
+        "userId": 4,
         "serviceId": 3
     },
     {
+        "id":"2",
         "name": "Coding Homework",
         "description": "help a student with javascript coding homework",
         "postDate": "2022-01-15",
         "allotedTime": "00:50:00",
+        "isActive": false,
+        "isCompleted": false,
+        "userId": 3,
+        "serviceId": 1
+    },
+    {
+        "id":"3",
+        "name": "Law Homework",
+        "description": "help a student LAW homework",
+        "postDate": "2020-01-15",
+        "allotedTime": "00:50:00",
         "isActive": true,
         "isCompleted": false,
-        "userId": 2,
-        "serviceId": 1
+        "userId": 3,
+        "serviceId": 2
+    },
+    {
+        "id":"4",
+        "name": "TAX LAW",
+        "description": "its TAX SEASON I need help please!!!",
+        "postDate": "2021-04-15",
+        "allotedTime": "00:50:00",
+        "isActive": true,
+        "isCompleted": true,
+        "userId": 3,
+        "serviceId": 2
     }
 ]
