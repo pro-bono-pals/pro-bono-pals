@@ -1,61 +1,73 @@
-.pagecontainer{
-    background-color: #f2c173;
+.pagecontainer {
+    background-color: #fff;
 }
-body {
-  background-color: #f2c173;
+
+
+/* body {
+background-color: #f2c173;
+} */
+
+#homepage-img {
+    margin: auto;
+    width: 100%
 }
+
 .background-image {
-   margin: auto;
+    margin: auto;
     display: block;
-    min-height: 100%;
-    /* min-width: 1020px; */
-     /* height: 60%; */
+    height: 100%;
+    /* min-height: 100%; */
     position: static;
-    /* top: 0;
-    left: 0; */
-    /* display: block;
-  margin-left: auto;
-  margin-right: auto; */
-  /* width: 60%; */
-  width: 600px;
-    height: auto;
+    width: 600px;
+    /* height: auto; */
     margin-top: 40px;
     margin-bottom: 40px;
-
 }
-.navbar{
+
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
- background-color: #f2c173;
- border-style: solid;
-    border-color: black;
- margin-top: 0;
+    background-color: #f2c173;
+    margin-top: 0;
     margin-bottom: 0;
-
-} 
-.introcontainer{
-    background-color: white;
-    border-style: solid;
-    border-color: black;
-    position: static;
+    height: auto;
 }
 
-#homepage-blurb{
-  line-height: 2;
+#homgpage-logo {
+    font-size: 30px;
 }
-.usercontainer{
-background-color: #f2c173;
+
+#homepage-signup-btn {
+    position: absolute;
+    top: 200px;
 }
-  .usercontainer .provider {
+
+
+/* .introcontainer{
+background-color: white;
+border-style: solid;
+border-color: black;
+position: static;
+} */
+
+#homepage-blurb {
+    line-height: 2;
+}
+
+.usercontainer {
+    /* background-color: #f2c173; */
+    background-color: #fff;
+}
+
+.usercontainer .provider {
     position: absolute;
     top: 45%;
     left: 50%;
-       
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color:#A7D2DD;
+    background-color: #A7D2DD;
     color: white;
     font-size: 26px;
     padding: 12px 24px;
@@ -63,8 +75,9 @@ background-color: #f2c173;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 10px;
-  }
-  .usercontainer .receiver {
+}
+
+.usercontainer .receiver {
     position: absolute;
     top: 114%;
     left: 50%;
@@ -78,75 +91,87 @@ background-color: #f2c173;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 10px;
-  }
-  .aboutuscontainer{
-      position: relative;
-      display: block;
-      justify-content: center;
-      align-content: center;
-      width: auto;
-      margin-bottom: 10px;
-      background-color: #ffffff;
-      /* border-style: solid; */
+}
+
+.aboutuscontainer {
+    margin-top: 100px;
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    color: black;
+    /* border-style: solid; */
     /* border-color: black; */
-        }
-  
-.listingscontainer{
-    background-color: #ffe6c2;
-    color:black;
-    margin: 100px 300px;
+}
+
+.listings-container {
+    margin-top: 100px;
+    background-color: #ffffff;
+    color: black;
+    /* margin: 100px 300px;
+padding: 20px; */
+    /* background-color: #f2c173; */
     /* background-color: #F2CB90; */
 }
-.mypost{
-  border: solid;
-  border-color: red;
-  float: left;  
-  width: auto;
-}#mydashboard-body{
-  display: flex;
-  justify-content: space-around;
-  border: solid;
-  border-color: black;
-}
-#mycurrent-tasks{
-border: solid;
-border-color: blue;
-float: right;
-width: auto;
-}
-#newpostbtn{
-  float: right;
-}
-.post{
-  border: solid;
-  border-color: red;
-  float: left;  
-  width: auto;
-}#dashboard-body{
-  display: flex;
-  justify-content: space-around;
-  border: solid;
-  border-color: black;
-}
-#current-tasks{
-border: solid;
-border-color: blue;
-float: right;
-width: auto;
-}
-#acceptedbtn{
-  position: static;
-  justify-self: center;
+
+.mypost {
+    border: solid;
+    border-color: red;
+    float: left;
+    width: auto;
 }
 
-.form-background{
-  background-color: #f2c173;
-  padding: 20px;
+#mydashboard-body {
+    display: flex;
+    justify-content: space-around;
+    border: solid;
+    border-color: black;
 }
 
+#mycurrent-tasks {
+    border: solid;
+    border-color: blue;
+    float: right;
+    width: auto;
+}
 
+#newpostbtn {
+    float: right;
+}
 
+.post {
+    border: solid;
+    border-color: red;
+    float: left;
+    width: auto;
+}
 
+#dashboard-body {
+    display: flex;
+    justify-content: space-around;
+    border: solid;
+    border-color: black;
+}
+
+#current-tasks {
+    border: solid;
+    border-color: blue;
+    float: right;
+    width: auto;
+}
+
+#acceptedbtn {
+    position: static;
+    justify-self: center;
+}
+
+.form-background {
+    background-color: #f2c173;
+    padding: 20px;
+}
 
 @media screen and (max-width: 1024px) {
     img.bg {

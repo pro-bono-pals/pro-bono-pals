@@ -2,11 +2,11 @@
     <nav id="reciever-dashboard-nav">
         <h1>Welcome, {{ users.name }} </h1>
         <h6> Receiver Mode</h6>
+            <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
 
     </nav>
 </div>
 <div id="dashboard-body">
-    <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
     <div id="mypost-list">
        <h3>Here are all of the tasks per your requests, {{users.name}}</h3>
         {{#each tasks as |task|}}
