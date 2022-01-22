@@ -32,10 +32,10 @@ const loginFormHandler = async (event) => {
     });
 
             if (response.ok) {
-                // toastr.success("You have successfully logged in!", "SUCCESS!")
                 document.location.replace('/dashboard');
             } else {
-                alert(response.statusText);
+                toastr.success("You have successfully logged in!", "SUCCESS!")
+                // alert(response.statusText);
             }
         }
 
@@ -45,4 +45,3 @@ const loginFormHandler = async (event) => {
 document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
-
