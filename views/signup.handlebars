@@ -1,8 +1,7 @@
 <div class="row">
-  <div class="col-md-6">
-    <h2>Signup</h2>
-
-    <form class="form signup-form">
+  <div class="col d-flex justify-content-center">
+    <form class="form signup-form form-background">
+          <h4 class="text-center">Join the ProBonoPal Community! </h4>
       <div class="form-group">
         <label for="name-signup">Name:</label>
         <input class="form-input" type="text" id="name-signup" />
@@ -16,7 +15,7 @@
         <input class="form-input" type="password" id="password-signup" />
       </div>
       <div class="form-group">
-        <label for="is-provider-signup">Please check the box if you are planning to provide a service. If you are looking to request a service, please leav the box unchecked.</label>
+        <label for="is-provider-signup">Please check the box if you are planning to provide a service. If you are looking to request a service, please leave the box unchecked.</label>
         <input class="form-input" type="checkbox" id="is-provider-signup" />
       </div>
       <div class="form-group">
@@ -24,13 +23,13 @@
         <input class="form-input" type="text" id="zipcode-signup" pattern="[0-9]*"/>
       </div>
       <div class="form-group">
-        <label for="disclaimer-signup">Disclaimer:</label>
+        <label for="disclaimer-signup">Disclaimer: ProBonoPals is not responsible for the services provided. Please check the box to agree. </label>
         <input class="form-input" type="checkbox" id="disclaimer-signup"/>
       </div>
       <div class="form-group">
         <label for="education-signup">What is your highest level of education?</label>
         <select class="form-input" id="education-signup">
-           <option value="" hidden disabled>Please select level of education</option> 
+           <option value="" disasbled="disabled" hidden="hidden">Please select level of education</option> 
            <option value="high-school">High school or equivalent</option>
            <option value="some-college">Some college</option>
            <option value="professional-school">Professional School</option>
@@ -41,7 +40,7 @@
         </select>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
+        <button class="btn btn-primary" type="submit">Sign Up!</button>
       </div>
     </form>
   </div>
