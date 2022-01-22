@@ -30,7 +30,7 @@ const logout = async () => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      // toastr.success("You have successfully logged out!", "Success!")
+      toastr.success("You have successfully logged out!", "Success!")
       // alert("You have successfully logged out!");
     }
   };

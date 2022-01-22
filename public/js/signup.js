@@ -11,6 +11,24 @@ const signupFormHandler = async (event) => {
     const disclaimer = document.querySelector('#disclaimer-signup').value.trim();
     const education = document.querySelector('#education-signup').value.trim();
 
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+
 
     if (name && email && password) {
         const response = await fetch('api/users', {
@@ -22,7 +40,7 @@ const signupFormHandler = async (event) => {
             if (response.ok) {
                 document.location.replace('/profile');
             } else {
-                alert(response.statusText);
+                toastr.success("You have successfully signed up to Pro Bono Pals!", "Success!")
             }
     }
 };
