@@ -1,8 +1,9 @@
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Task:</h3>
+    <h3>Create a New Task:{{user.name}}</h3>
 
     <form class="form new-task-form">
+      <p hidden id="user-id">{{user.id}}</p>
       <div class="form-group">
         <label for="task-title">Task Title:</label>
         <input class="form-input" type="text" id="task-name" name="task-name" />
@@ -19,16 +20,17 @@
       </div>
       <div class="form-group">
         <label for="alloted-time">Estimated Time to Complete Task in minutes:</label>
-        <input class="form-input" id="alloted time" name="alloted time"></input>
+        <input class="form-input" id="alloted-time" name="alloted time"></input>
       </div>
       <div class="form-group">
         <label for="task-description">Please describe your task here: </label>
         <textarea class="form-input" id="task-description" name="task-description"></textarea>
       </div>
       <div class="form-group">
-        <button id="new-post-btn" type="submit" class="btn btn-primary">POST!</button>
+        <button type="submit" class="btn btn-primary">POST!</button>
       </div>
     </form>
   </div>
+</div>
 
-  <script src="./js/task.js"></script>
+<script src="./js/task.js"></script>

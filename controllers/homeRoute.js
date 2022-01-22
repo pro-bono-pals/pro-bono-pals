@@ -33,13 +33,15 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/task', isAuth, async (req, res) => {
-    if (req.session.logged_in) {
-        res.render('task', {
-            logged_in: true,
-        });
-    } else {
-        res.redirect('/task');
-    };
+    const userData = await User.findByPk(req.session.userId, {
+        attributes:{exclude:['password']}
+    })
+    const user = userData.get({ plain: true });
+
+    res.render('task',{
+        user,
+        logged_in: true
+    });
 })
 
 router.get('/dashboard',isAuth,async (req,res) => {
@@ -76,7 +78,7 @@ router.get('/provider', isAuth, async(req,res)=>{
     const tasks = taskData.map((task)=>task.get({plain: true}));
 
     const activetData = await Task.findAll({
-        where:{isActive:true},
+        where:{isActive:true, isCompleted:false},
         include:[{model:User}]
     })
     const acts= activetData.map((act)=>act.get({plain:true}));
@@ -103,7 +105,7 @@ router.get('/receiver', isAuth, async(req,res)=>{
     const tasks = taskData.map((task)=>task.get({plain: true}));
     
     const activetData = await Task.findAll({
-        where:{isActive:true},
+        where:{isActive:true,isCompleted:false},
         include:[{model:User}]
     })
     const acts= activetData.map((act)=>act.get({plain:true}));

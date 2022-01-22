@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const isAuth = require('../../utils/auth')
+
 const { Profile, User, Education, Service } = require('../../models');
 
 router.get('/',async (req, res) => {
@@ -26,12 +28,12 @@ router.get('/:id',async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/',isAuth, async (req, res) => {
     try {
       const profileData = await Profile.create(req.body);
   
       req.session.save(() => {
-        req.session.profileId = profileData.id;
+        req.session.user_id = profileData.id;
         // req.session.logged_in = true;
   
         res.status(200).json(profileData, { message: 'profile created!'});

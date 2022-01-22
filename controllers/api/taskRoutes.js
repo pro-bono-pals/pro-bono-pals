@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const { User, Service, Task } = require('../../models');
+const isAuth = require('../../utils/auth')
+const { User, Task } = require('../../models');
 
 router.get('/',async (req, res) => {
 
     try{
       const taskData = await Task.findAll({
-        include: [{ model: User }, { model: Service}],
+        include: [{ model: User }],
       });
       res.status(200).json(taskData);
     } catch(err) {
@@ -14,29 +15,30 @@ router.get('/',async (req, res) => {
 });
   
 router.get('/:id',async (req, res) => {
-    try{
-      const taskData = await Task.findByPk(req.params.id);
-      if (!taskData) {
-        res.status(404).json({message: 'No task found with that id!'});
-        return
-      }
-      res.status(200).json(profileData);
-    } catch(err){
-      res.status(500).json(err);
+  try{
+    const taskData = await Task.findByPk(req.params.id,{
+      include: [{ model: User }],
+    });
+    if (!taskData){
+      res.status(404).json({message: 'No task found with that id!'});
+      return
     }
+    res.status(200).json(taskData);
+  } catch(err){
+    res.status(500).json(err);
+  }
 });
 
-router.post('/', async (req, res) => {
-    try {
-      const newTask = await Task.create(req.body)
-              
-      req.session.save(() => {
-        req.session.taskId = newTask.id
-        });
-  
-        res.status(200).json(newTask, { message: 'task posted!'});
 
-    } catch (err) {
+router.post('/',isAuth, async (req, res) => {
+    try {
+      const taskData = await Task.create({
+        ...req.body,
+        user_id: req.session.user_id,
+      }); 
+      
+      res.status(200).json(taskData);
+    }catch(err) {
       res.status(400).json(err);
     }
   });
@@ -44,7 +46,11 @@ router.post('/', async (req, res) => {
 router.put('/:id', async(req,res)=>{
   try{
     const taskData = await Task.update(
-      {isActive:req.body.isActive}
+      {
+        isActive:req.body.isActive,
+        isCompleted: req.body.isCompleted
+      }
+
       ,
       {
         where:{
