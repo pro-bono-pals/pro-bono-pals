@@ -1,12 +1,14 @@
 const router = require('express').Router();
+const isAuth = require('../../utils/auth')
+
 const { Service } = require('../../models');
 
-router.post('/', async (req, res) => {
+router.post('/',isAuth, async (req, res) => {
     try {
         const serviceData = await Service.create(req.body);
         
         req.session.save(() => {
-        req.session.serviceId = serviceData.id
+        req.session.user_id = serviceData.id
         });
         
         res.status(200).json(serviceData);

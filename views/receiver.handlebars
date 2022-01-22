@@ -6,11 +6,11 @@
     </nav>
 </div>
 <div id="dashboard-body">
+    <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
     <div id="mypost-list">
        <h3>Here are all of the tasks per your requests, {{users.name}}</h3>
         {{#each tasks as |task|}}
         <div class="mypost">
-            <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
             <h4> My Service Requests</h4>
             <div id="mypost-title">
                 <p> Post Title: {{task.name}} </p>
@@ -58,6 +58,7 @@
                 <div id="currentpost-description">
                     <p> Service Description: {{act.description}} </p>
                 </div>
+                <button id="completedbtn" class="completed-btn btn-primary">Task Completed</button>
             </div>
             {{/each}}
         </div>

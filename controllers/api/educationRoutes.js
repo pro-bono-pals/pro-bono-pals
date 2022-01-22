@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const isAuth = require('../../utils/auth')
 const {Education} = require('../../models');
 
 router.get('/',async (req, res) => {
@@ -24,14 +25,15 @@ router.get('/:id',async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', isAuth, async (req, res) => {
     try {
       const educationData = await Education.create(req.body);
   
       req.session.save(() => {
-        req.session.educationId = educationData.id;  
-        res.status(200).json(educationData, { message: 'New education name added!'});
+        req.session.user_id = educationData.id;  
       });
+      res.status(200).json(educationData, { message: 'New education name added!'});
+
     } catch (err) {
       res.status(400).json(err);
     }
