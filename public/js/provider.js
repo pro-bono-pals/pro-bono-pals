@@ -20,16 +20,6 @@ const acceptTask = async (event) => {
         "hideMethod": "fadeOut"
       }
 
-    // console.log("you have accepted this task")
-    // const response = await fetch ('api/user/task', {
-    //     method: 'GET',
-    //     headers: { 'Content-Type': 'application/json' },
-    // });
-
-    // if (response.ok) {
-    //     document.location.replace('/dashboard');
-
-    // }
     event.preventDefault();
     // when a provider accepts the task (by pressing the accept button) then in the Task.js model field isActive will change from isActive=false (the default value) to isActive=true 
     // need to make a put route in taskRoutes
@@ -57,3 +47,31 @@ const acceptTask = async (event) => {
 
 
 acceptBtn.addEventListener("click", acceptTask)
+
+const completeTaskHandler = async(event) =>{
+    event.preventDefault();
+    // when a provider completes the task (by pressing the complete button) then in the Task.js model field isCompleted will change from isCompleted=false (the default value) to isCompleted = true
+    // need to make a put route in taskRoutes
+    // it would be nice to have a color change to say this task is completed (blue)
+    const isCompleted = true
+    const id = document.querySelector('#taskcompleteId').innerHTML;
+
+    if (isCompleted && id ){
+        const response = await fetch(`api/task/${id}`,{
+            method:'PUT',
+            body: JSON.stringify({isCompleted, id}),
+            headers:{
+                'Content-Type':'application/json',
+            }, 
+            
+        });
+        if(response.ok){
+            document.location.replace('/dashboard')
+        }else{
+            alert('Failed to complete task');
+        }
+    }
+}
+document
+    .querySelector('#completedbtn')
+    .addEventListener('click',completeTaskHandler)
