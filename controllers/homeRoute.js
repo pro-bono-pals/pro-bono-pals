@@ -47,17 +47,6 @@ router.get('/dashboard',isAuth,async (req,res) => {
     // res.render('provider')
     const userData = await User.findByPk(req.session.userId, {
         attributes: { exclude: ['password'] },
-        include: [
-            { 
-                model:Profile,
-                include:[{model:Education},{model:Service}]
-
-            }, 
-            {
-               model:Task 
-            },
-        ]
-        // {model:Education}, {model:Service},{model:Task}],
     }); 
 
     const user = userData.get({ plain: true });
@@ -66,17 +55,61 @@ router.get('/dashboard',isAuth,async (req,res) => {
     console.log("HELLOOOOOOOOOO",role)
 
     if(role === true){
-        res.render('provider', {
-            ...user,
+        res.render('/provider', {
+    
             logged_in: true
           });
     }else{
-        res.render('receiver', {
-            ...user,
+        res.render('/receiver', {
             logged_in: true
           });
     }
 
 });
 
+router.get('/provider', isAuth, async(req,res)=>{
+    // in the provider dashboard we want all the task to be posted 
+    // on their board so that the provider can select tasks posted by the receiver
+    const userData =await User.findByPk(req.session.userId)
+    const users = userData.get({plain:true})
+
+    const taskData =await Task.findAll({
+        where:{isActive:false},
+        include:[{model:User}]
+    })
+    const tasks = taskData.map((task)=>task.get({plain: true}));
+
+    const activetData = await Task.findAll({
+        where:{isActive:true},
+        include:[{model:User}]
+    })
+    const acts= activetData.map((act)=>act.get({plain:true}));
+
+    res.render('provider',{
+        users,
+        tasks,
+        acts,
+        logged_in: true,
+      });
+})
+
+router.get('/receiver', isAuth, async(req,res)=>{
+    // on the reciver dashboard we want ONLY the tasks posted by the reciver to be shown on the dashboard
+    const userData =await User.findByPk(req.session.userId)
+    const users = userData.get({plain:true})
+    const receiver = users.id
+    console.log("LOOK HEREEeEEEEEEEE", receiver)
+
+    const taskData =await Task.findAll({
+        where:{userId:receiver},
+        include:[{model:User}]
+    })
+    const tasks = taskData.map((task)=>task.get({plain: true}));
+
+    res.render('receiver',{
+        users,
+        tasks,
+        logged_in:true,
+    });
+})
 module.exports = router;

@@ -7,28 +7,31 @@
 </div>
 <div id="dashboard-body">
     <div id="mypost-list">
+       <h3>Here are all of the tasks per your requests, {{users.name}}</h3>
+        {{#each tasks as |task|}}
         <div class="mypost">
-            <button id="make-post-btn" class="completed-btn btn-primary">Make a NEW post</button>
+            <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
             <h4> My Service Requests</h4>
             <div id="mypost-title">
                 <p> Post Title: {{task.name}} </p>
             </div>
             <div id="mypost-username">
-                <p> My Username:{{name}} </p>
+                <p> My Username:{{task.user.name}} </p>
             </div>
             <div id="mypost-date">
-                <p> Service must be completed by {{date}} </p>
+                <p> Service must be completed by {{format_date task.postDate}} </p>
             </div>
             <div id="mypost-location">
-                <p> Service Location: {{location}} </p>
+                <p> Service Location: {{users.id}} </p>
             </div>
             <div id="mypost-expertise">
-                <p> Service Category: {{service.name}} </p>
+                <p> Service Category: {{serviceNumbers task.serviceId}} </p>
             </div>
             <div id="mypost-description">
-                <p> {{post}} </p>
+                <p> Description: {{task.description}} </p>
             </div>
         </div>
+        {{/each}} 
     </div>
     <div class="currentcontainer">
         

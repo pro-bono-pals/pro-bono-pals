@@ -1,59 +1,65 @@
 <div> 
     <nav id="provider-dashboard-nav"> 
-        <h1>Welcome, {{ name }} </h1>
+        <h1>Welcome, {{ users.name }} </h1>
         <h6> Provider Mode</h6>
     </nav>
 </div>
 <div id="dashboard-body">
     <div id="post-list">
+        <h3>Here are all the tasks posted by receivers who need help</h3
+        {{#each tasks as |task|}}
         <div class="post">
             <h4>Upcoming Service Opportunities</h4>
+            <p  hidden id=taskId>{{task.id}}</p>
             <div id="post-title">
                 <p> Your latest service opportunity {{task.name}} </p>
             </div>
             <div id="post-username">
-                <p> {{name}} could use some help. </p>
+                <p> {{task.user.name}} could use some help. </p>
             </div>
             <div id="post-date">
-                <p> Posted on {{date}} </p>
+                <p> Posted on {{format_date task.postDate}} </p>
             </div>
             <div id="post-location">
-                <p> Service Location: {{location}} </p>
+                <p> Service Location: NEED to fix{{location}} </p>
             </div>
             <div id="post-expertise">
-                <p> Service Category: {{service.name}} </p>
+                <p> Service Category: {{serviceNumbers task.serviceId}} </p>
             </div>
             <div id="post-description">
             <p> {{task.description}} </p>
             <button id="acceptbtn" class="help-btn btn-primary">Accept Task</button>
         </div>
+        </div>
+        {{/each}}
     </div>
-    </div>
-    <div id="current-tasks">
+    <div id="current-tasks"> 
         <h4>Current Task Info</h4>
-               <div class="currentpost">
+        {{#each acts as |act|}}
+        <div class="currentpost">
+                <p  hidden id=taskcompleteId>{{act.id}}</p>
                 <div id="currentpost-title">
-                    <p> Service Needed: {{task.name}} </p>
+                    <p> Service Needed: {{act.name}} </p>
                 </div>
                 <div id="currentpost-username">
-                    <p> Reciever: {{name}} is recieving your help. </p>
+                    <p> Reciever: {{act.user.name}} is recieving your help. </p>
                 </div>
                 <div id="currentpost-date">
-                    <p> Post Date: {{date}} </p>
+                    <p> Post Date: {{formate_date act.postDate}} </p>
                 </div>
                 <div id="currentpost-location">
-                    <p> Service Location: {{location}} </p>
+                    <p> Service Location:NEED TO FIX {{location}} </p>
                 </div>
                 <div id="currentpost-expertise">
-                    <p> Service Category: {{service.name}} </p>
+                    <p> Service Category: {{serviceNumbers act.serviceId}} </p>
                 </div>
                 <div id="currentpost-description">
-                <p> Service Description: {{task.description}} </p>
-        <button id="completedbtn" class="completed-btn btn-primary">Task Completed</button>
+                <p> Service Description: {{act.description}} </p>
+                <button id="completedbtn" class="completed-btn btn-primary">Task Completed</button>
+                </div>
+        </div>
+        {{/each}}
     </div>
-</div>
-
-
 </div>
 <script src="./js/provider.js"></script>
 <script src="./js/logout.js"></script>
