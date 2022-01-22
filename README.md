@@ -1,4 +1,5 @@
   ##  ProBonoPals
+  ![License: MIT](<https://img.shields.io/badge/License-MIT-yellow.svg>)
  
   
   ## Description 
@@ -27,7 +28,7 @@ The term "pro bono" is Latin meaning "for the public good." ProBonoPals is just 
   Clone the repo. If any additional installation requirements are needed, it'd be here: npm inquirer, npm express, SQL, Heroku, Toastr
 
   ## License 
-  This project does not have a liscence.
+  This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
   
   ## Contributing 
  The contributing team members are Evan Bulliner, Amadea Margo, Fiona Nicdao, and Camille Pierre-Louis. Only the team members can contribute.
@@ -60,4 +61,10 @@ The live deployment is here: https://pro-bono-pals.herokuapp.com/
 We want to give a special thanks to the  the great creators of Girl Power 5. We saw how they utilized the toastr library and decided to leverage a few things from their project to make ours look just as cool as theirs! A huge thanks to Jen Doyle and the wonderful members of 'Girl Power 5'!
  ## Questions
  Questions? Please contact us directly via the pro-bono-pal directory.
-  
+
+ For any further assistance, you may contact us at:
+
+  * Github: [amadeamargo](<https://github.com/amadeamargo>)
+  * Github: [fiona1nicdao](<https://github.com/fiona1nicdao>)
+  * Github: [cpo6559](<https://github.com/cpo6559>)
+  * Github: [ebulliner](<https://github.com/ebulliner>)

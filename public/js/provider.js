@@ -2,6 +2,24 @@ const acceptBtn = document.querySelector("#acceptbtn")
 
 const acceptTask = async (event) => {
 
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+
     // console.log("you have accepted this task")
     // const response = await fetch ('api/user/task', {
     //     method: 'GET',
@@ -31,7 +49,8 @@ const acceptTask = async (event) => {
             document.location.replace('/dashboard')
             console.log("haha",response)
         }else{
-            alert('Failed to accept task');
+            toastr.error("Failed to accept Task!", "Failure!")
+            // alert('Failed to accept task');
         }
     }
 };
