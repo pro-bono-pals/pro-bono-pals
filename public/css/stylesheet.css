@@ -41,6 +41,10 @@ body {
     border-color: black;
     position: static;
 }
+
+#homepage-blurb{
+  line-height: 2;
+}
 .usercontainer{
 background-color: #f2c173;
 }
@@ -135,6 +139,10 @@ width: auto;
   justify-self: center;
 }
 
+.form-background{
+  background-color: #f2c173;
+  padding: 20px;
+}
 
 
 
