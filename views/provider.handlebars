@@ -20,9 +20,6 @@
             <div id="post-date">
                 <p> Posted on {{format_date task.postDate}} </p>
             </div>
-            <div id="post-location">
-                <p> Service Location: NEED to fix{{location}} </p>
-            </div>
             <div id="post-expertise">
                 <p> Service Category: {{serviceNumbers task.serviceId}} </p>
             </div>
@@ -48,7 +45,7 @@
                     <p> Post Date: {{format_date act.postDate}} </p>
                 </div>
                 <div id="currentpost-location">
-                    <p> Service Location:NEED TO FIX {{location}} </p>
+                    <p>Email:{{act.user.email}}</p>
                 </div>
                 <div id="currentpost-expertise">
                     <p> Service Category: {{serviceNumbers act.serviceId}} </p>
