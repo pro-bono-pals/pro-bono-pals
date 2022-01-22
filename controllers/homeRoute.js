@@ -47,6 +47,7 @@ router.get('/dashboard',isAuth,async (req,res) => {
     // res.render('provider')
     const userData = await User.findByPk(req.session.userId, {
         attributes: { exclude: ['password'] },
+
     }); 
 
     const user = userData.get({ plain: true });
@@ -55,14 +56,9 @@ router.get('/dashboard',isAuth,async (req,res) => {
     console.log("HELLOOOOOOOOOO",role)
 
     if(role === true){
-        res.render('/provider', {
-    
-            logged_in: true
-          });
+        res.redirect('/provider')
     }else{
-        res.render('/receiver', {
-            logged_in: true
-          });
+        res.redirect('/receiver')
     }
 
 });
@@ -105,10 +101,17 @@ router.get('/receiver', isAuth, async(req,res)=>{
         include:[{model:User}]
     })
     const tasks = taskData.map((task)=>task.get({plain: true}));
+    
+    const activetData = await Task.findAll({
+        where:{isActive:true},
+        include:[{model:User}]
+    })
+    const acts= activetData.map((act)=>act.get({plain:true}));
 
     res.render('receiver',{
         users,
         tasks,
+        acts,
         logged_in:true,
     });
 })
