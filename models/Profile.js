@@ -38,7 +38,7 @@ Profile.init(
     },
     zipcode: {
         type: DataTypes.CHAR(5),
-        allowNull: false
+        // allowNull: false
     }
   },
   {
