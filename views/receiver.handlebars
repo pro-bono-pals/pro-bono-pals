@@ -21,9 +21,6 @@
             <div id="mypost-date">
                 <p> Service must be completed by {{format_date task.postDate}} </p>
             </div>
-            <div id="mypost-location">
-                <p> Service Location: NEED TO FIX {{users.id}} </p>
-            </div>
             <div id="mypost-expertise">
                 <p> Service Category: {{serviceNumbers task.serviceId}} </p>
             </div>
@@ -50,7 +47,7 @@
                     <p> Post Date: {{format_date act.postDate}} </p>
                 </div>
                 <div id="currentpost-location">
-                    <p> Service Location: NEED TO FIX {{location}} </p>
+                    <p>Email:{{act.user.email}}</p>
                 </div>
                 <div id="currentpost-expertise">
                     <p> Service Category: {{serviceNumbers act.serviceId}} </p>

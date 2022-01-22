@@ -41,7 +41,7 @@ background-color: #f2c173;
 
 #homepage-signup-btn {
     position: absolute;
-    top: 200px;
+    top: 225px;
 }
 
 
@@ -129,13 +129,15 @@ padding: 20px; */
     justify-content: space-around;
     border: solid;
     border-color: black;
+    background-color: powderblue;
 }
 
 #mycurrent-tasks {
     border: solid;
-    border-color: blue;
+    border-color: black;
     float: right;
     width: auto;
+    background-color: powderblue;
 }
 
 #newpostbtn {
@@ -154,12 +156,13 @@ padding: 20px; */
     justify-content: space-around;
     border: solid;
     border-color: black;
+    background-color: peru;
 }
 
 #current-tasks {
     border: solid;
-    border-color: blue;
-    float: right;
+    border-color: white;
+    float: center;
     width: auto;
 }
 
