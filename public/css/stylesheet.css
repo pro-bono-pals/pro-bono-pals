@@ -116,6 +116,12 @@ padding: 20px; */
     /* background-color: #f2c173; */
     /* background-color: #F2CB90; */
 }
+#mypost-list{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 235, 208);
+}
+
 
 .mypost {
     border: solid;
@@ -139,6 +145,10 @@ padding: 20px; */
     width: auto;
     background-color: powderblue;
 }
+.currentcontainer{
+    display: flex;
+    flex-direction: column;
+}
 
 #newpostbtn {
     float: right;
@@ -147,12 +157,14 @@ padding: 20px; */
 .post {
     border: solid;
     border-color: red;
+    background-color: rgb(201, 235, 208);
     float: left;
     width: auto;
 }
 
 #dashboard-body {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     border: solid;
     border-color: black;
@@ -162,7 +174,8 @@ padding: 20px; */
 #current-tasks {
     border: solid;
     border-color: white;
-    float: center;
+    background-color: rgb(217, 235, 250);
+    float: right;
     width: auto;
 }
 

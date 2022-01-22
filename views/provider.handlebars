@@ -5,32 +5,7 @@
     </nav>
 </div>
 <div id="dashboard-body">
-    <div id="post-list">
-        <h3>Here are all the tasks posted by receivers who need help</h3
-        {{#each tasks as |task|}}
-        <div class="post">
-            <h4>Upcoming Service Opportunities</h4>
-            <p  hidden id=taskId>{{task.id}}</p>
-            <div id="post-title">
-                <p> Your latest service opportunity {{task.name}} </p>
-            </div>
-            <div id="post-username">
-                <p> {{task.user.name}} could use some help. </p>
-            </div>
-            <div id="post-date">
-                <p> Posted on {{format_date task.postDate}} </p>
-            </div>
-            <div id="post-expertise">
-                <p> Service Category: {{serviceNumbers task.serviceId}} </p>
-            </div>
-            <div id="post-description">
-            <p> {{task.description}} </p>
-            <button id="acceptbtn" class="help-btn btn-primary">Accept Task</button>
-        </div>
-        </div>
-        {{/each}}
-    </div>
-    <div id="current-tasks"> 
+        <div id="current-tasks"> 
         <h4>Current Task Info</h4>
         {{#each acts as |act|}}
         <div class="currentpost">
@@ -57,6 +32,33 @@
         </div>
         {{/each}}
     </div>
+    <div id="post-list">
+        <h3>Here are all the tasks posted by receivers who need help</h3
+        {{#each tasks as |task|}}
+        <div></div>
+        <div class="post">
+            <h4>Upcoming Service Opportunities</h4>
+            <p  hidden id=taskId>{{task.id}}</p>
+            <div id="post-title">
+                <p> Your latest service opportunity {{task.name}} </p>
+            </div>
+            <div id="post-username">
+                <p> {{task.user.name}} could use some help. </p>
+            </div>
+            <div id="post-date">
+                <p> Posted on {{format_date task.postDate}} </p>
+            </div>
+            <div id="post-expertise">
+                <p> Service Category: {{serviceNumbers task.serviceId}} </p>
+            </div>
+            <div id="post-description">
+            <p> {{task.description}} </p>
+            <button id="acceptbtn" class="help-btn btn-primary">Accept Task</button>
+        </div>
+        </div>
+        {{/each}}
+    </div>
+
 </div>
 <script src="./js/provider.js"></script>
 <script src="./js/logout.js"></script>
