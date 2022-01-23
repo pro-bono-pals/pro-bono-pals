@@ -66,11 +66,11 @@ const signupFormHandler = async (event) => {
       }
     console.log(name, email, password,isProvider, zipcode, disclaimer, educationId)
 
-    if (name && email && password && isProvider && disclaimer && educationId) {
-        const response = await fetch('api/user/', {
+    if (name && email && password && isProvider ) {
+        const response = await fetch('/api/user/', {
             method: 'POST',
-            body: JSON.stringify({ name, email, password, isProvider, disclaimer,educationId }),
-            headres: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, password, isProvider}),
+            headers: { 'Content-Type': 'application/json' },
             });
             console.log("hahhaa")
             if (response.ok) {
