@@ -15,6 +15,7 @@ The term "pro bono" is Latin meaning "for the public good." ProBonoPals is just 
   * [Installation](#installation)
   * [License](#license)
   * [Contributing](#contributing)
+  * [User Story](#user-story)
   * [Tests](#tests)
   * [Wireframes](#wireframes)
   * [ERD](#erd)
@@ -32,6 +33,24 @@ The term "pro bono" is Latin meaning "for the public good." ProBonoPals is just 
   
   ## Contributing 
  The contributing team members are Evan Bulliner, Amadea Margo, Fiona Nicdao, and Camille Pierre-Louis. Only the team members can contribute.
+
+ ## User Story
+  To demo the application try these demo accounts:
+  Provider Mode
+  Here we have Evan recent graduate from Law school looking to provide his service to the community. His login is 
+  ```
+  email: evan@email.com
+  password: password1
+  ```
+  when you login you see on the top of the page  the task that he as selected to help with. There is a button on each task which Evan will press when he has completed that task with a reveiver and the task is removed from the page. The section below are  all the task that are available for him to choice to help. There is another button if he choice to help the reciver, and when the button is pressed will remove the task from available task and repopulate on the top of his page of task he selecte to help will. 
+
+  Reveiver Mode
+  Here we have Amadea a community member who is looking for help in various fields. Her login is 
+  ```
+  email: amadea@email.com
+  password: password1
+  ```
+  On her dashboard you can see the task that a provider is currently helping her with and on the below that section are the task that she has requested help with but has not been accepted by a provider to help her with yet. On the right side you will see a button for Amadea to select if she wants to make a new task she needs help will. Once pressed she is taken to a different page with a form to fill out. When completed and she press sumbit, she will be redirected to her dashboard and her new task will repopulate on the bottom of the page. 
   
   ## Tests
   Use the application. Additional testing methods would be here: The user will need node.js and Heroku to deploy.

@@ -5,43 +5,43 @@ const Service = require('./Service');
 const Education = require('./Education');
 
 User.hasOne(Profile, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE',
 });
 
 Profile.belongsTo(User, {
-    foreignKey: 'userId'
+    foreignKey: 'user_id'
 })
 
 Profile.hasMany(Service, {
-    foreignKey: 'serviceId',
+    foreignKey: 'service_id',
     onDelete: 'CASCADE'
 });
 
 Service.belongsTo(Profile, {
-    foreignKey: 'serviceId'
+    foreignKey: 'service_id'
 });
 
 Task.hasOne(Service, {
-    foreignKey: 'serviceId',
+    foreignKey: 'service_id',
     onDelete: 'CASCADE'
 });
 
 Service.belongsTo(Task, {
-    foreignKey: 'serviceId'
+    foreignKey: 'service_id'
 });
 
 User.hasMany(Task, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
 Task.belongsTo(User, {
-    foreignKey: 'userId'
+    foreignKey: 'user_id'
 });
 
 Profile.hasOne(Education, {
-    foreignKey: 'educationId',
+    foreignKey: 'education_id',
     onDelete: 'CASCADE'
 });
 

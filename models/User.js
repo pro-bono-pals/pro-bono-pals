@@ -35,7 +35,7 @@ User.init(
         len: [8],
       },
     },
-    profileId: {
+    profile_id: {
       type: DataTypes.INTEGER,
       reference: {
         model: "profile",

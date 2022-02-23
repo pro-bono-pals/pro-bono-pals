@@ -7,8 +7,9 @@
         "allotedTime": "01:59:00",
         "isActive": false,
         "isCompleted": false,
-        "userId": 4,
-        "serviceId": 3
+        "user_id": 4,
+        "provider_id":null,
+        "service_id": 3
     },
     {
         "id":"2",
@@ -18,8 +19,9 @@
         "allotedTime": "00:50:00",
         "isActive": false,
         "isCompleted": false,
-        "userId": 3,
-        "serviceId": 1
+        "user_id": 3,
+        "provider_id":null,
+        "service_id": 1
     },
     {
         "id":"3",
@@ -29,8 +31,9 @@
         "allotedTime": "00:50:00",
         "isActive": true,
         "isCompleted": false,
-        "userId": 3,
-        "serviceId": 2
+        "user_id": 3,
+        "provider_id":2,
+        "service_id": 2
     },
     {
         "id":"4",
@@ -39,8 +42,9 @@
         "postDate": "2021-04-15",
         "allotedTime": "00:50:00",
         "isActive": true,
-        "isCompleted": true,
-        "userId": 3,
-        "serviceId": 2
+        "isCompleted": false,
+        "user_id": 3,
+        "provider_id":2,
+        "service_id": 2
     }
 ]

@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col d-flex justify-content-center">
+        <form class="form signup-form form-background">
+            {{!-- <h4 class="text-center">Join the ProBonoPal Community! </h4> --}}
+            <div>
+                <h4>Hi {{user.name}}! Just a few questions left! Thank you for joining the ProBonoPals!</h4>
+                <h1 hidden id="user_id">{{user.id}}</h1>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="zipcode-signup">Zipcode:</label>
+                <input class="form-input" type="number" id="zipcode"/>
+            </div>
+            <div class="form-group">
+                <label for="disclaimer-signup">Disclaimer: ProBonoPals is not responsible for the services provided. Please check the box to agree. </label>
+                <input class="form-input" type="checkbox" id="disclaimer-signup"name="disclaimer"value="claim"/>
+            </div>
+            <div class="form-group">
+                <label for="education-signup">What is your highest level of education?</label>
+                <select class="form-input" id="education-signup">
+                <option value="" disasbled="disabled" hidden="hidden">Please select level of education</option> 
+                <option value="high-school">High school or equivalent</option>
+                <option value="some-college">Some college</option>
+                <option value="professional-school">Professional School</option>
+                <option value="associate">Associate's degree</option>
+                <option value="bachelors">Bachelor's degree</option>
+                <option value="masters">Master's degree</option>
+                <option value="doctorate">Doctorate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Sign Up!</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="./js/profilesignup.js"></script>

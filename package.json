@@ -2,10 +2,11 @@
     "name": "pro-bono-pals",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "seed": "node seeds/seeds.js"
+        "seed": "node seeds/seeds.js",
+        "start":"nodemon server.js"
     },
     "repository": {
         "type": "git",

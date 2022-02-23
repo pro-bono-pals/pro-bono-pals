@@ -1,7 +1,8 @@
 <div> 
     <nav id="provider-dashboard-nav"> 
         <h1>Welcome, {{ users.name }} </h1>
-        <h6> Provider Mode</h6>
+        <h3> Provider Mode</h3>
+        <h2 hidden id="provider_id">{{users.id}}</h2>
     </nav>
 </div>
 <div id="dashboard-body">
@@ -33,30 +34,36 @@
         {{/each}}
     </div>
     <div id="post-list">
-        <h3>Here are all the tasks posted by receivers who need help</h3
-        {{#each tasks as |task|}}
-        <div></div>
-        <div class="post">
-            <h4>Upcoming Service Opportunities</h4>
-            <p  hidden id=taskId>{{task.id}}</p>
-            <div id="post-title">
-                <p> Your latest service opportunity {{task.name}} </p>
+        <h3>Here are all the tasks posted by receivers who need help</h3>
+        <div>
+        {{!-- {{#if ''}} --}}
+        {{!-- <h4>There are NO task posted please check in later for new postings </h4> --}}
+        {{!-- {{else}} --}}
+            {{#each tasks as |task|}}
+            <div class="post">
+                <h4>Upcoming Service Opportunities</h4>
+                <p  hidden id=taskId>{{task.id}}</p>
+                <div id="post-title">
+                    <p> Your latest service opportunity {{task.name}} </p>
+                </div>
+                <div id="post-username">
+                    <p> {{task.user.name}} could use some help. </p>
+                </div>
+                <div id="post-date">
+                    <p> Posted on {{format_date task.postDate}} </p>
+                </div>
+                <div id="post-expertise">
+                    <p> Service Category: {{serviceNumbers task.serviceId}} </p>
+                </div>
+                <div id="post-description">
+                <p> {{task.description}} </p>
+                <button id="acceptbtn" class="help-btn btn-primary">Accept Task</button>
+                </div>
             </div>
-            <div id="post-username">
-                <p> {{task.user.name}} could use some help. </p>
-            </div>
-            <div id="post-date">
-                <p> Posted on {{format_date task.postDate}} </p>
-            </div>
-            <div id="post-expertise">
-                <p> Service Category: {{serviceNumbers task.serviceId}} </p>
-            </div>
-            <div id="post-description">
-            <p> {{task.description}} </p>
-            <button id="acceptbtn" class="help-btn btn-primary">Accept Task</button>
+            {{/each}}
+        {{!-- {{/if}} --}}
         </div>
-        </div>
-        {{/each}}
+
     </div>
 
 </div>

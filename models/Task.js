@@ -11,7 +11,7 @@ Task.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        serviceId:{
+        service_id:{
             type: DataTypes.INTEGER,
             references: {
                 model:"service",
@@ -31,7 +31,7 @@ Task.init(
             allowNull:false,
             defaultValue: DataTypes.NOW
         },
-        userId: {
+        user_id: {
             type: DataTypes.INTEGER,
             references:{
                 model:"user",
@@ -47,6 +47,10 @@ Task.init(
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue:false
+        },
+        provider_id:{
+            type:DataTypes.INTEGER,
+            defaultValue:null,
         },
         allotedTime: {
             type: DataTypes.TIME,

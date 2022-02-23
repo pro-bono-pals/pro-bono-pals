@@ -7,27 +7,25 @@ const newTaskHandler = async (event) => {
   const service = document.querySelector('#service-type').value.trim();
   const allotedTime = document.querySelector('#alloted-time').value.trim();
   const description = document.querySelector('#task-description').value.trim();
-  const userId =document.querySelector('#user-id').innerHTML;
+  const user_id =document.querySelector('#user-id').innerHTML;
 
-  let serviceId
+  let service_id
   const getServiceid = function() {
     if(service === "coding"){
-        serviceId = 1
+        service_id = 1
         return;
     }else if(service ==="Law"){
-        serviceId = 2
+        service_id = 2
         return;
     }else if(service ==="Culinary"){
-        serviceId = 3
+        service_id = 3
         return;
     }else if(service ==="Trade"){
-        serviceId =4
+        service_id =4
         return;
     }
   }
   getServiceid()
-  console.log(service, serviceId)
-  console.log(name, allotedTime, description, userId)
 
   toastr.options = {
       "closeButton": false,
@@ -47,19 +45,17 @@ const newTaskHandler = async (event) => {
       "hideMethod": "fadeOut"
   }
 
-  if (name && description && allotedTime && userId && serviceId){
+  if (name && description && allotedTime && user_id && service_id){
     const response = await fetch(`/api/task/`, {
       method:'POST',
-      body:JSON.stringify({ name, description, allotedTime, userId, serviceId}),
+      body:JSON.stringify({ name, description, allotedTime, user_id, service_id}),
       headers:{
           'Content-Type': 'application/json',
       },
     });
-    console.log("hello there ")
     if(response.ok){
       toastr.success("You've added a new task!", "YAY! ")
       document.location.replace('/dashboard')
-      console.log("do I work?", response)
     } else {
       alert('Failed to create task');
     };

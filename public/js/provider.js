@@ -26,21 +26,19 @@ const acceptTask = async (event) => {
     // it would be nice to have a color change to say this task is active (green)
     const isActive = true
     const id = document.querySelector('#taskId').innerHTML;
-    if(isActive && id){
+    const provider_id = document.querySelector('#provider_id').innerHTML;
+    if(isActive && id && provider_id){
         const response = await fetch(`/api/task/${id}`,{
             method:'PUT',
-            body: JSON.stringify({isActive, id}),
+            body: JSON.stringify({isActive, id, provider_id}),
             headers:{
                 'Content-Type':'application/json',
             }, 
         });
-        console.log("hehe")
         if(response.ok){
             document.location.replace('/dashboard')
-            console.log("haha",response)
         }else{
             toastr.error("Failed to accept Task!", "Failure!")
-            // alert('Failed to accept task');
         }
     }
 };

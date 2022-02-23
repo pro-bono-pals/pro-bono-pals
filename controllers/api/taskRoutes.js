@@ -32,10 +32,11 @@ router.get('/:id',async (req, res) => {
 
 router.post('/',isAuth, async (req, res) => {
     try {
-      const taskData = await Task.create({
-        ...req.body,
-        user_id: req.session.user_id,
-      }); 
+      const taskData = await Task.create(req.body);
+      req.session.save(()=>{
+        req.session.user_id = taskData.id;
+        req.session.logged_in = true;
+      })
       
       res.status(200).json(taskData);
     }catch(err) {
@@ -48,7 +49,8 @@ router.put('/:id', async(req,res)=>{
     const taskData = await Task.update(
       {
         isActive:req.body.isActive,
-        isCompleted: req.body.isCompleted
+        isCompleted: req.body.isCompleted,
+        provider_id: req.body.provider_id,
       }
 
       ,
