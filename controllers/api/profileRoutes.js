@@ -28,15 +28,15 @@ router.get('/:id',async (req, res) => {
     }
 });
 
-router.post('/',isAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     try {
       const profileData = await Profile.create(req.body);
   
       req.session.save(() => {
         req.session.user_id = profileData.id;
-        // req.session.logged_in = true;
+        req.session.logged_in = true;
   
-        res.status(200).json(profileData, { message: 'profile created!'});
+        res.status(200).json(profileData);
       });
     } catch (err) {
       res.status(400).json(err);

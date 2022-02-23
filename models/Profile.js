@@ -11,14 +11,14 @@ Profile.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    userId: {
+    user_id: {
         type: DataTypes.INTEGER,
         reference: {
             model: "user",
             key: "id"
         }
     },
-    educationId: {
+    education_id: {
         type: DataTypes.INTEGER,
         reference: {
             model: "education",
@@ -29,7 +29,7 @@ Profile.init(
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
-    serviceId: {
+    service_id: {
         type: DataTypes.INTEGER,
         reference: {
             model: "service",

@@ -2,33 +2,33 @@
     {
         "id":"1",
         "disclaimer": true,
-        "serviceId":1,
+        "service_id":1,
         "zipcode":12345,
-        "userId": 1,
-        "educationId":1
+        "user_id": 1,
+        "education_id":1
     },
     {
         "id":"2",
         "disclaimer": true,
-        "serviceId":2,
+        "service_id":2,
         "zipcode":22222,
-        "userId": 2,
-        "educationId":2
+        "user_id": 2,
+        "education_id":4
     },
     {
         "id":"3",
         "disclaimer": true,
-        "serviceId":3,
+        "service_id":3,
         "zipcode":33322,
-        "userId": 3,
-        "educationId":3
+        "user_id": 3,
+        "education_id":3
     },
     {
         "id":"4",
         "disclaimer": true,
-        "serviceId":4,
+        "service_id":4,
         "zipcode":44433,
-        "userId": 4,
-        "educationId":4
+        "user_id": 4,
+        "education_id":4
     }
 ]

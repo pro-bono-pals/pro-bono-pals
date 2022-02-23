@@ -1,7 +1,7 @@
 <div>
     <nav id="reciever-dashboard-nav">
         <h1>Welcome, {{ users.name }} </h1>
-        <h6> Receiver Mode</h6>
+        <h3> Receiver Mode</h3>
             <button id="newpostbtn" class="completed-btn btn-primary">Make a NEW post</button>
 
     </nav>
@@ -16,7 +16,7 @@
                 <p> Post Title: {{task.name}} </p>
             </div>
             <div id="mypost-username">
-                <p> My Username:{{task.users.name}} </p>
+                <p> My Username:{{task.user.name}} </p>
             </div>
             <div id="mypost-date">
                 <p> Service must be completed by {{format_date task.postDate}} </p>

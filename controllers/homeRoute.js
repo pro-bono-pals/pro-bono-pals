@@ -25,15 +25,30 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
     // res.render('signup');
     if (req.session.logged_in) {
-        res.redirect('/dashboard');
+        res.redirect('/providersignup');
         return;
     }
     res.render('signup');
 
 });
 
+router.get('/profilesignup',isAuth, async (req,res)=>{
+    // if (req.session.logged_in) {
+    //     res.redirect('/dashboard');
+    //     return;
+    // }
+    const userData = await User.findByPk(req.session.user_id,{
+        attributes: { exclude: ['password'] },
+    })
+    const user = userData.get({ plain: true });
+    res.render('profilesignup',{
+        user,
+        logged_in: true,
+    });
+})
+
 router.get('/task', isAuth, async (req, res) => {
-    const userData = await User.findByPk(req.session.userId, {
+    const userData = await User.findByPk(req.session.user_id, {
         attributes:{exclude:['password']}
     })
     const user = userData.get({ plain: true });
@@ -47,15 +62,13 @@ router.get('/task', isAuth, async (req, res) => {
 router.get('/dashboard',isAuth,async (req,res) => {
     // res.render('receiver')
     // res.render('provider')
-    const userData = await User.findByPk(req.session.userId, {
+    const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
 
     }); 
 
     const user = userData.get({ plain: true });
     const role = user.isProvider
-    
-    console.log("HELLOOOOOOOOOO",role)
 
     if(role === true){
         res.redirect('/provider')
@@ -68,8 +81,9 @@ router.get('/dashboard',isAuth,async (req,res) => {
 router.get('/provider', isAuth, async(req,res)=>{
     // in the provider dashboard we want all the task to be posted 
     // on their board so that the provider can select tasks posted by the receiver
-    const userData =await User.findByPk(req.session.userId)
+    const userData =await User.findByPk(req.session.user_id)
     const users = userData.get({plain:true})
+    const provider = req.session.user_id
 
     const taskData =await Task.findAll({
         where:{isActive:false},
@@ -78,7 +92,7 @@ router.get('/provider', isAuth, async(req,res)=>{
     const tasks = taskData.map((task)=>task.get({plain: true}));
 
     const activetData = await Task.findAll({
-        where:{isActive:true, isCompleted:false},
+        where:{isActive:true, isCompleted:false, provider_id:provider},
         include:[{model:User}]
     })
     const acts= activetData.map((act)=>act.get({plain:true}));
@@ -93,19 +107,18 @@ router.get('/provider', isAuth, async(req,res)=>{
 
 router.get('/receiver', isAuth, async(req,res)=>{
     // on the reciver dashboard we want ONLY the tasks posted by the reciver to be shown on the dashboard
-    const userData =await User.findByPk(req.session.userId)
+    const userData =await User.findByPk(req.session.user_id)
     const users = userData.get({plain:true})
     const receiver = users.id
-    console.log("LOOK HEREEeEEEEEEEE", receiver)
 
     const taskData =await Task.findAll({
-        where:{userId:receiver},
+        where:{user_id:receiver},
         include:[{model:User}]
     })
     const tasks = taskData.map((task)=>task.get({plain: true}));
     
     const activetData = await Task.findAll({
-        where:{isActive:true,isCompleted:false},
+        where:{isActive:true,isCompleted:false, user_id:receiver},
         include:[{model:User}]
     })
     const acts= activetData.map((act)=>act.get({plain:true}));
