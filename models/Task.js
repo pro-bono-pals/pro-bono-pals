@@ -54,7 +54,7 @@ Task.init(
         },
         allotedTime: {
             type: DataTypes.TIME,
-            allowNull: false
+            // allowNull: false
         }
     },
     {

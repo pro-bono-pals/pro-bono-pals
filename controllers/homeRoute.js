@@ -112,7 +112,7 @@ router.get('/receiver', isAuth, async(req,res)=>{
     const receiver = users.id
 
     const taskData =await Task.findAll({
-        where:{user_id:receiver},
+        where:{user_id:receiver,isActive:false},
         include:[{model:User}]
     })
     const tasks = taskData.map((task)=>task.get({plain: true}));

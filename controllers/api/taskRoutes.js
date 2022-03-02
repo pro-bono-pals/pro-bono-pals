@@ -30,7 +30,7 @@ router.get('/:id',async (req, res) => {
 });
 
 
-router.post('/',isAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     try {
       const taskData = await Task.create(req.body);
       req.session.save(()=>{
